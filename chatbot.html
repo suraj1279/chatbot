@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Robot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"/>
+    <script
+      src="https://kit.fontawesome.com/1bd5a2332f.js"
+      crossorigin="anonymous"></script>
+      
+  </head>
+  <body>
+    <div class="container">
+      <div class="loader">
+        <div class="loading"></div>
+        <p>Please wait...</p>
+      </div>
+      <div class="massnger">
+        <!-- Popup start -->
+        <div class="popup"></div>
+        <!-- Popup end -->
+
+        <div class="header">
+          <h2>Chat Robot</h2>
+          <button class="header-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul class="header-menu-details">
+            <li class="block-user"><a>Block</a></li>
+            <li class="report"><a>Report</a></li>
+            <li class="setting"><a>Setting</a></li>
+            <li class="clear-all"><a>Clear All</a></li>
+          </ul>
+        </div>
+
+        <div class="chat-box">
+          <!-- Setting -->
+          <div class="setting-container">
+            <div class="setting-change-con">
+              <div>
+                <div class="setting-change-con-text">
+                  <label class="font-size-lab" for="rag">Font Size</label>
+                  <span class="font-size-value"></span>
+                </div>
+                <input
+                  value="16"
+                  min="1"
+                  max="50"
+                  class="range-font"
+                  id="rag"
+                  type="range"
+                />
+              </div>
+              <div>
+                <div class="setting-change-con-text">
+                  <label class="font-weight-lab" for="font-w"
+                    >Font Weight</label
+                  >
+                  <span class="font-weight-value"></span>
+                </div>
+                <input
+                  value="350"
+                  min="350"
+                  max="602"
+                  class="weight-font"
+                  id="font-w"
+                  type="range"
+                />
+              </div>
+            </div>
+            <div class="setting-messages">
+              <p align="center" class="time">Today</p>
+              <div class="user chat">
+                <p class="setting-messages-text" style="font-size: 15px">
+                  Hello
+                </p>
+                <span>15:39</span>
+              </div>
+
+              <div class="bot chat">
+                <p class="setting-messages-text" style="font-size: 15px">Hi</p>
+                <span>15:39</span>
+              </div>
+            </div>
+            <div class="btns">
+              <button class="close-setting">Default</button>
+              <button class="confirm-setting">Confirm</button>
+            </div>
+          </div>
+          <!-- Setting End  -->
+
+          <!-- Report -->
+          <div class="report-container">
+            <p id="report-que">
+              Why do you wanna <strong>report</strong> the
+              <strong>Bot</strong> ?
+            </p>
+            <br />
+            <div>
+              <label for="bad-content">Violence</label>
+              <input type="checkbox" />
+            </div>
+            <div>
+              <label for="child-content">Child Abuse</label>
+              <input type="checkbox" />
+            </div>
+            <div>
+              <label for="sex-content">Pornography</label>
+              <input type="checkbox" />
+            </div>
+            <div>
+              <label for="others">Others</label>
+              <input id="others" type="checkbox" />
+            </div>
+            <div class="btns">
+              <button class="close-report">Cancel</button>
+              <button class="confirm-report">Confirm</button>
+            </div>
+          </div>
+          <!-- Report -->
+          <!-- Block -->
+          <div class="block-container">
+            <p>
+              You <strong>Blocked</strong> the Bot <br />
+              <strong>Click</strong> the Button below to
+              <strong>Unblock</strong>
+            </p>
+            <button class="unblock-btn">Unblock</button>
+          </div>
+          <!-- Block End-->
+          <p class="chat-time"></p>
+          <div class="no-message">
+            <img
+              alt="no message picture"
+              src="https://icon-library.com/images/messenger-app-icon/messenger-app-icon-20.jpg"
+              width="100"
+              height="100"
+            />
+            <p>No messages here yet...</p>
+          </div>
+          <div class="chats"></div>
+        </div>
+        <div class="footer">
+          <input class="message" type="text" placeholder="Write a message..." />
+          <button class="send">Send</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
